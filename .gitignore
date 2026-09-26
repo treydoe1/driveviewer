@@ -1,5 +1,6 @@
 .DS_Store
 .build/
+.build-x86_64/
 dist/
 *.xcuserstate
 .swiftpm/

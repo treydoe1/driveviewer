@@ -4,6 +4,12 @@ A native macOS disk map. It scans a drive or folder and shows files and folders 
 
 The menu bar item shows the startup disk's available percentage and can start a drive scan. Drive scans keep a bounded hierarchy in memory. Smaller entries appear as **Other items**.
 
+## Install
+
+Download the universal macOS ZIP from [Releases](https://github.com/treydoe1/driveviewer/releases/latest), unzip it, and move `driveviewer.app` to Applications. It supports macOS 14 or later on Apple Silicon and Intel Macs.
+
+This build is not notarized. If macOS blocks it, try opening it once, then go to System Settings > Privacy & Security and select Open Anyway. See [Apple's instructions](https://support.apple.com/en-us/102445).
+
 ## Build
 
 Requires macOS 14 or later and Xcode command-line tools.
@@ -19,7 +25,7 @@ To run the tests:
 swift test -c release
 ```
 
-The app is built and signed locally with an ad hoc signature. There is no packaged installer.
+The local build uses an ad hoc signature. Run `./package-release.sh` to make a universal ZIP.
 
 ## Access and privacy
 
