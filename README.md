@@ -8,7 +8,7 @@ The menu bar item shows the startup disk's available percentage and can start a 
 
 Download the universal macOS ZIP from [Releases](https://github.com/treydoe1/driveviewer/releases/latest), unzip it, and move `driveviewer.app` to Applications. It supports macOS 14 or later on Apple Silicon and Intel Macs.
 
-This build is not notarized. If macOS blocks it, try opening it once, then go to System Settings > Privacy & Security and select Open Anyway. See [Apple's instructions](https://support.apple.com/en-us/102445).
+Release builds are signed with a Developer ID certificate and notarized by Apple.
 
 ## Build
 
@@ -26,6 +26,16 @@ swift test -c release
 ```
 
 The local build uses an ad hoc signature. Run `./package-release.sh` to make a universal ZIP.
+
+To sign and notarize a release build, first save notarization credentials with `xcrun notarytool store-credentials`. Then run `./package-release.sh` and:
+
+```sh
+DEVELOPER_ID_APPLICATION="Developer ID Application: Your Name (TEAMID)" \
+NOTARY_KEYCHAIN_PROFILE="your-notary-profile" \
+./notarize-release.sh
+```
+
+The notarization script signs the app, submits it to Apple, staples the ticket, and replaces the release ZIP with the notarized app.
 
 ## Access and privacy
 
