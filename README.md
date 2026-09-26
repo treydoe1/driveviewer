@@ -8,7 +8,7 @@ The menu bar item shows the startup disk's available percentage and can start a 
 
 Download the universal macOS ZIP from [Releases](https://github.com/treydoe1/driveviewer/releases/latest), unzip it, and move `driveviewer.app` to Applications. It supports macOS 14 or later on Apple Silicon and Intel Macs.
 
-Release builds are signed with a Developer ID certificate and notarized by Apple.
+Version 1.0.1 and later are signed with a Developer ID certificate and notarized by Apple.
 
 ## Build
 
