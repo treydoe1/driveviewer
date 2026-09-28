@@ -6,9 +6,9 @@ The menu bar item shows the startup disk's available percentage and can start a 
 
 ## Install
 
-Download the macOS disk image from [Releases](https://github.com/treydoe1/driveviewer/releases/latest), open it, and drag `driveviewer.app` to Applications. A ZIP is also available. It supports macOS 14 or later on Apple Silicon and Intel Macs.
+[Download driveviewer for macOS](https://github.com/treydoe1/driveviewer/releases/download/v1.0.1/driveviewer-v1.0.1-macos-universal.dmg)
 
-Version 1.0.1 and later are signed with a Developer ID certificate and notarized by Apple.
+Open the disk image and drag `driveviewer.app` to Applications. It supports macOS 14 or later on Apple Silicon and Intel Macs. The app and disk image are signed and notarized by Apple. A [ZIP download](https://github.com/treydoe1/driveviewer/releases/tag/v1.0.1) is also available.
 
 ## Build
 
@@ -41,7 +41,7 @@ The notarization script signs the app, submits it to Apple, staples the ticket, 
 
 driveviewer scans local file metadata. It does not upload file names or scan results, and it has no telemetry or network service. It stores the last selected scan path in macOS user defaults so the next scan can use the same location. It does not store a scan between launches.
 
-For a full drive scan, macOS may require Full Disk Access. The app can open the correct System Settings page, but macOS requires the user to grant access. Moving an item to Trash requires confirmation in the app.
+For a complete drive scan, grant driveviewer Full Disk Access in System Settings > Privacy & Security > Full Disk Access. The app can open that settings page, but macOS requires you to approve access. Moving an item to Trash requires confirmation in the app.
 
 Scan totals use allocated file size. APFS clones, snapshots, and protected system storage can make the total differ from Finder's used-space number. Drive scans skip `~/Library/CloudStorage` to avoid walking remote placeholders; choose that folder directly to scan its local contents. The app reports folders it could not read.
 
