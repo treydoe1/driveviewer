@@ -6,7 +6,7 @@ The menu bar item shows the startup disk's available percentage and can start a 
 
 ## Install
 
-Download the universal macOS ZIP from [Releases](https://github.com/treydoe1/driveviewer/releases/latest), unzip it, and move `driveviewer.app` to Applications. It supports macOS 14 or later on Apple Silicon and Intel Macs.
+Download the macOS disk image from [Releases](https://github.com/treydoe1/driveviewer/releases/latest), open it, and drag `driveviewer.app` to Applications. A ZIP is also available. It supports macOS 14 or later on Apple Silicon and Intel Macs.
 
 Version 1.0.1 and later are signed with a Developer ID certificate and notarized by Apple.
 
@@ -35,7 +35,7 @@ NOTARY_KEYCHAIN_PROFILE="your-notary-profile" \
 ./notarize-release.sh
 ```
 
-The notarization script signs the app, submits it to Apple, staples the ticket, and replaces the release ZIP with the notarized app.
+The notarization script signs the app, submits it to Apple, staples the ticket, and replaces the release ZIP with the notarized app. Run `./package-dmg.sh` with the same environment variables to create and notarize a drag-to-Applications disk image.
 
 ## Access and privacy
 
